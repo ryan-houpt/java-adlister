@@ -16,6 +16,12 @@
 
 
 
+<%--<c:if test="${param.username.equals(\"admin\")}">--%>
+    <%--<c:if test='${param.password.equals("password")}'>--%>
+        <%--<jsp:forward page="profile.jsp" />--%>
+    <%--</c:if>--%>
+<%--</c:if>--%>
+
 <form method="post" action="">
 
     <p>Enter Username:
