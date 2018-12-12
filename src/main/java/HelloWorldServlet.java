@@ -12,15 +12,16 @@ import java.util.List;
 public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
-
         Ads adDao = DaoFactory.getAdsDao();
         List<Ad> ads = adDao.all();
         request.setAttribute("ads", ads);
 
         request.getRequestDispatcher("ads/index.jsp").forward(request, response);
+
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
